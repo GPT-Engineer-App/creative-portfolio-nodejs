@@ -27,7 +27,6 @@ const Index = () => {
             </Link>
           </HStack>
         </VStack>
-
         <Heading as="h3" size="lg" mb={5}>
           Projects
         </Heading>
@@ -51,13 +50,18 @@ const Index = () => {
             </Box>
           ))}
         </SimpleGrid>
+        import ContactSection from '../components/ContactSection'; // ... existing code ...
         <ResumeDownloadSection />
+        <ContactSection />
       </Container>
     </Box>
   );
 };
 
+// ... existing imports and code ...
+
 import ResumeDownloadSection from "../components/ResumeDownloadSection";
+import ContactSection from "../components/ContactSection";
 
 // Sample projects data
 const projects = [
