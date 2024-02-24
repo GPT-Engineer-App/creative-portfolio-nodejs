@@ -19,11 +19,11 @@ const Index = () => {
             A passionate Node.js developer with a knack for building scalable backend systems.
           </Text>
           <HStack spacing={5}>
-            <Link href="https://github.com" isExternal>
-              <IconButton aria-label="GitHub Profile" icon={<FaGithub />} size="lg" variant="ghost" />
+            <Link href="https://github.com" isExternal _focus={{ boxShadow: "none" }}>
+              <IconButton aria-label="GitHub Profile" icon={<FaGithub />} size="lg" variant="solid" colorScheme="gray" isRound={true} _hover={{ bg: "gray.600" }} />
             </Link>
-            <Link href="https://linkedin.com" isExternal>
-              <IconButton aria-label="LinkedIn Profile" icon={<FaLinkedin />} size="lg" variant="ghost" />
+            <Link href="https://linkedin.com" isExternal _focus={{ boxShadow: "none" }}>
+              <IconButton aria-label="LinkedIn Profile" icon={<FaLinkedin />} size="lg" variant="solid" colorScheme="blue" isRound={true} _hover={{ bg: "blue.600" }} />
             </Link>
           </HStack>
         </VStack>

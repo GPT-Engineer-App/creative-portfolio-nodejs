@@ -18,9 +18,7 @@ const Header = () => {
 
       <Spacer />
 
-      <Box display={{ base: "block", md: "none" }} onClick={toggleColorMode}>
-        <IconButton icon={useColorModeValue(<FaMoon />, <FaSun />)} />
-      </Box>
+      <IconButton aria-label="Toggle color mode" icon={useColorModeValue(<FaMoon />, <FaSun />)} onClick={toggleColorMode} isRound={true} size="lg" variant="ghost" ml={{ base: "0", md: "3" }} />
 
       <Box display={{ sm: "block", md: "none" }} flexBasis={{ base: "100%", md: "auto" }}>
         <Flex align="center" justify={["center", "space-between", "flex-end", "flex-end"]} direction={["column", "row", "row", "row"]} pt={[4, 4, 0, 0]}>
