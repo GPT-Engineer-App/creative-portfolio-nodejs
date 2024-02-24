@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Container, Heading, Text, VStack, HStack, Image, SimpleGrid, Badge, Link, IconButton, useColorMode, useColorModeValue, Flex, Spacer } from "@chakra-ui/react";
+import { Box, Container, Heading, Text, VStack, HStack, Image, SimpleGrid, Badge, Link, IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import Header from "../components/Header";
 import { FaNodeJs, FaGithub, FaLinkedin, FaSun, FaMoon, FaProjectDiagram } from "react-icons/fa";
 
 const Index = () => {
@@ -9,12 +10,8 @@ const Index = () => {
 
   return (
     <Box bgColor={bgColor} color={color} minH="100vh">
-      <Container maxW="container.md" pt={10}>
-        <Flex>
-          <Heading as="h1">Node.js Developer Portfolio</Heading>
-          <Spacer />
-          <IconButton aria-label="Toggle Dark Mode" icon={useColorModeValue(<FaMoon />, <FaSun />)} onClick={toggleColorMode} ml={2} />
-        </Flex>
+      <Container maxW="container.xl">
+        <Header />
         <VStack spacing={8} as="section" my={14}>
           <Image borderRadius="full" boxSize="150px" src="https://images.unsplash.com/photo-1699885960867-56d5f5262d38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxOb2RlLmpzJTIwRGV2ZWxvcGVyfGVufDB8fHx8MTcwODc4ODM3NHww&ixlib=rb-4.0.3&q=80&w=1080" alt="Node.js Developer" _hover={{ transform: "scale(1.05)", transition: "transform 0.2s" }} />
           <Heading as="h2">John Doe</Heading>
