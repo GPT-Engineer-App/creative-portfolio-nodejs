@@ -54,10 +54,13 @@ const Index = () => {
             </Box>
           ))}
         </SimpleGrid>
+        <ResumeDownloadSection />
       </Container>
     </Box>
   );
 };
+
+import ResumeDownloadSection from "../components/ResumeDownloadSection";
 
 // Sample projects data
 const projects = [
