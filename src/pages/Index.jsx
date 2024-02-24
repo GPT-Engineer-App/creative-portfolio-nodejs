@@ -16,7 +16,7 @@ const Index = () => {
           <IconButton aria-label="Toggle Dark Mode" icon={useColorModeValue(<FaMoon />, <FaSun />)} onClick={toggleColorMode} ml={2} />
         </Flex>
         <VStack spacing={8} as="section" my={14}>
-          <Image borderRadius="full" boxSize="150px" src="https://images.unsplash.com/photo-1699885960867-56d5f5262d38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxOb2RlLmpzJTIwRGV2ZWxvcGVyfGVufDB8fHx8MTcwODc4ODM3NHww&ixlib=rb-4.0.3&q=80&w=1080" alt="Node.js Developer" />
+          <Image borderRadius="full" boxSize="150px" src="https://images.unsplash.com/photo-1699885960867-56d5f5262d38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxOb2RlLmpzJTIwRGV2ZWxvcGVyfGVufDB8fHx8MTcwODc4ODM3NHww&ixlib=rb-4.0.3&q=80&w=1080" alt="Node.js Developer" _hover={{ transform: "scale(1.05)", transition: "transform 0.2s" }} />
           <Heading as="h2">John Doe</Heading>
           <Text fontSize="xl" textAlign="center">
             A passionate Node.js developer with a knack for building scalable backend systems.
@@ -36,15 +36,19 @@ const Index = () => {
         </Heading>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           {projects.map((project, index) => (
-            <Box key={index} borderWidth="1px" borderRadius="lg" overflow="hidden" p={5}>
+            <Box key={index} borderWidth="1px" borderRadius="lg" overflow="hidden" p={5} _hover={{ boxShadow: "0 4px 12px 0 rgba(0, 0, 0, 0.05)", transform: "translateY(-5px)", transition: "box-shadow 0.2s, transform 0.2s" }}>
               <Heading as="h4" size="md" mb={2}>
                 {project.title}
               </Heading>
               <Text mb={3}>{project.description}</Text>
               <HStack>
-                <Badge colorScheme="green">Node.js</Badge>
+                <Badge colorScheme="green" _hover={{ transform: "rotate(-3deg)", transition: "transform 0.1s" }}>
+                  Node.js
+                </Badge>
                 {project.technologies.map((tech, techIndex) => (
-                  <Badge key={techIndex}>{tech}</Badge>
+                  <Badge key={techIndex} _hover={{ transform: "rotate(3deg)", transition: "transform 0.1s" }}>
+                    {tech}
+                  </Badge>
                 ))}
               </HStack>
             </Box>
