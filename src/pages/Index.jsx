@@ -9,7 +9,14 @@ const Index = () => {
   const color = useColorModeValue("gray.800", "gray.100");
 
   return (
-    <Box bgColor={bgColor} color={color} minH="100vh">
+    <Box
+      bgColor={bgColor}
+      color={color}
+      minH="100vh"
+      background="url('data:image/svg+xml;utf8,<svg xmlns=\"
+      http:backgroundRepeat="no-repeat" //www.w3.org/2000/svg\" viewBox=\"0 0 1440 320\"><path fill=\"%23f7fafc\" fill-opacity=\"1\" d=\"M0,64L48,58.7C96,53,192,43,288,74.7C384,107,480,181,576,192C672,203,768,149,864,138.7C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z\"></path></svg>')"
+      backgroundSize="cover"
+    >
       <Container maxW="container.xl">
         <Header />
         <VStack spacing={8} as="section" my={14}>
